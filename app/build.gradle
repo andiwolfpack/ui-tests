@@ -30,4 +30,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    def koin_version = '0.9.3'
+    // Koin for Android
+    implementation "org.koin:koin-android-architecture:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

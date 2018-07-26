@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.koin:koin-android-architecture-0.9.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.3.aar/6ebace185298ad8dfecb8697cb729295/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.3.aar/6ebace185298ad8dfecb8697cb729295/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.koin/koin-android-architecture/0.9.3/223a3dadcde7976612e76fa240c1eb21b6c76a69/koin-android-architecture-0.9.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
