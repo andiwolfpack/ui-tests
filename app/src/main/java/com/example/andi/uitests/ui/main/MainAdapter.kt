@@ -9,7 +9,10 @@ import kotlinx.android.synthetic.main.guys_item.view.*
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
-    private lateinit var guys: MutableList<String>
+    //initialize here as empty list or via constructor
+    //because getItemCount will be called when the class is
+    //initialized and guys.size will result in an exception
+    private var guys = listOf<String>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val root = LayoutInflater.from(parent.context).inflate(R.layout.guys_item, parent, false)
@@ -17,8 +20,9 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     fun updateData(guys: List<String>) {
-        this.guys.clear()
-        this.guys.addAll(guys)
+        //just re-assign the list
+        //no need to use .clear and .addAll
+        this.guys = guys
         notifyDataSetChanged()
     }
 

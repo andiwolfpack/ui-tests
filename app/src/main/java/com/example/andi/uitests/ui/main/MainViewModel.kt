@@ -9,10 +9,7 @@ class MainViewModel : ViewModel(), KoinComponent {
     val guysList = MutableLiveData<List<String>>()
 
     fun fetchData() {
-        if (guysList.value?.isEmpty() ?: return) {
-            val baietii = listOf("Tibisor", "Alinuts", "Vasilica", "Bogdanel")
-            guysList.value = baietii
-        }
+        guysList.value = listOf("Tibisor", "Alinuts", "Vasilica", "Bogdanel")
     }
 
 }
