@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Ui tests</string>
+    <string name="login">Login</string>
+    <string name="settings">Settings</string>
 </resources>

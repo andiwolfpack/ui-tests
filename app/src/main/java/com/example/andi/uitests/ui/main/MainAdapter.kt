@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.andi.uitests.R
 import kotlinx.android.synthetic.main.guys_item.view.*
 
@@ -37,6 +38,9 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun updateData(guy: String) {
             itemView.item_guys_name.text = guy
+            itemView.setOnClickListener {
+                Toast.makeText(itemView.context, "$guy clicked", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

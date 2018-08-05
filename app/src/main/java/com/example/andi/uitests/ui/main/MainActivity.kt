@@ -3,6 +3,7 @@ package com.example.andi.uitests.ui.main
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
 import com.example.andi.uitests.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         setupView()
         observe()
         viewModel.fetchData()
+        setSupportActionBar(act_main_toolbar)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun setupView() {
