@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         observe()
         viewModel.fetchData()
         setSupportActionBar(act_main_toolbar)
+        supportActionBar?.title = getString(R.string.guys_title)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

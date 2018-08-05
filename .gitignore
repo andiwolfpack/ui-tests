@@ -11,3 +11,12 @@
 .gradle/4.4/taskHistory/taskHistory.lock
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
 .idea/workspace.xml
+.idea/misc.xml
+.idea/caches/build_file_checksums.ser
+.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_30_jar.xml
+.idea/libraries/Gradle__com_android_support_test_rules_1_0_2.xml
+.idea/libraries/Gradle__com_google_android_apps_common_testing_accessibility_framework_accessibility_test_framework_2_0_jar.xml
+.gradle/4.4/fileHashes/resourceHashesCache.bin
+.gradle/4.4/javaCompile/jarAnalysis.bin
+.gradle/4.4/javaCompile/taskJars.bin
+.gradle/buildOutputCleanup/outputFiles.bin
