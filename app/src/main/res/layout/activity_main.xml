@@ -14,7 +14,7 @@
         android:background="?attr/colorPrimary"
         app:elevation="4dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@android:color/white" />
+        android:theme="@style/ToolbarTheme" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/act_main_rv_guys"
