@@ -1,6 +1,5 @@
 package com.example.andi.uitests.ui.main
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun observe() {
-        viewModel.guysList.observe(this, Observer {
+        viewModel.guysList.observe(this, android.arch.lifecycle.Observer {
             (act_main_rv_guys.adapter as MainAdapter).updateData(it ?: return@Observer)
         })
     }
