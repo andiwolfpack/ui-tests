@@ -1,8 +1,11 @@
 package com.example.andi.uitests
 
 import android.os.SystemClock
+import android.support.test.InstrumentationRegistry.getInstrumentation
 import android.support.test.espresso.Espresso.onView
+import android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu
 import android.support.test.espresso.action.ViewActions
+import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.action.ViewActions.typeText
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.contrib.RecyclerViewActions
@@ -53,6 +56,12 @@ class MainTest {
     fun testToolbar() {
         onView(allOf(isAssignableFrom(TextView::class.java), withParent(isAssignableFrom(Toolbar::class.java))))
                 .check(matches(withText(R.string.guys_title)))
+        sleep(500)
+        openActionBarOverflowOrOptionsMenu(getInstrumentation().targetContext)
+        onView(withText(R.string.login)).perform(click())
+        sleep(500)
+        openActionBarOverflowOrOptionsMenu(getInstrumentation().targetContext)
+        onView(withText(R.string.settings)).perform(click())
     }
 
     fun Int.click() = onView(withId(this)).perform(ViewActions.click())!!

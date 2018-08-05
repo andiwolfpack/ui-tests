@@ -39,7 +39,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         fun updateData(guy: String) {
             itemView.item_guys_name.text = guy
             itemView.setOnClickListener {
-                Toast.makeText(itemView.context, "$guy", Toast.LENGTH_SHORT).show()
+                Toast.makeText(itemView.context, guy, Toast.LENGTH_SHORT).show()
             }
         }
     }
