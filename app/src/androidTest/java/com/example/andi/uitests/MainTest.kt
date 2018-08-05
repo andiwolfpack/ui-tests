@@ -64,16 +64,13 @@ class MainTest {
         onView(withText(R.string.settings)).perform(click())
     }
 
-    fun Int.click() = onView(withId(this)).perform(ViewActions.click())!!
-    fun Int.write(text: String) = onView(withId(this)).perform(typeText(text))!!
-    fun Int.textEquals(text: String) = onView(withId(this)).check(matches(withText(text)))!!
     private infix fun ActivityTestRule<MainActivity>.containsToast(message: String) =
             onView(withText(message))
                     .inRoot(withDecorView(not(activity.window.decorView)))
                     .check(matches(isDisplayed()))!!
 
-    fun Int.click(position: Int) = onView(withId(this))
-            .perform(RecyclerViewActions.actionOnItemAtPosition<MainAdapter.ViewHolder>(position, ViewActions.click()))
+    private fun Int.click(position: Int) = onView(withId(this))
+            .perform(RecyclerViewActions.actionOnItemAtPosition<MainAdapter.ViewHolder>(position, ViewActions.click()))!!
 
-    fun sleep(time: Long) = SystemClock.sleep(time)
+    private fun sleep(time: Long) = SystemClock.sleep(time)
 }
